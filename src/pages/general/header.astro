@@ -5,22 +5,33 @@ import "../../assets/styles/general/header.scss";
 ---
 
 <header>
-    <div>
+    <div class="title">
         <Icon name="fire" />
-        <h2>TOSTADOR_VALENCIA</h2>
+        <h2>Kenya</h2>
     </div>
 
-    <!-- Desktop Nav -->
-    <nav>
-        <div>
-            <a href="#">Shop</a>
-            <a href="#">Wholesale</a>
-            <a href="#">Journal</a>
-        </div>
-        <button> Cart (0) </button>
-    </nav>
-    <!-- Mobile Menu Icon -->
-    <button>
-        <span>menu</span>
-    </button>
+    <div class="menu">
+        <!-- Desktop Nav -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Philosophy</a>
+                </li>
+                <li>
+                    <a href="#">Current roasts</a>
+                </li>
+                <li>
+                    <a href="#">Roasting machine</a>
+                </li>
+            </ul>
+            <a href="#" class="shop">
+                <Icon name="shopping-cart" /> Shop
+            </a>
+
+            <!-- Mobile Menu Icon -->
+            <button class="mobile-menu">
+                <Icon name="menu" />
+            </button>
+        </nav>
+    </div>
 </header>
