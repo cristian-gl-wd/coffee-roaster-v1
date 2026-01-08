@@ -2,10 +2,10 @@
 
 @font-face {
     font-family: "Syne";
-    src: url("/fonts/Syne-VariableFont_wght.ttf") format("truetype");
+    src: url("/fonts/syne-variablefont_wght-webfont.woff2") format("woff2");
     font-weight: 100 900;
     font-style: normal;
-    font-display: swap;
+    font-display: fallback;
 }
 html {
     font-family: "Syne", sans-serif;
