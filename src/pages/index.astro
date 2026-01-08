@@ -3,14 +3,289 @@
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Coffee roaster</title>
+    </head>
+    <body>
+        <!-- SECTION 1: HEADER & HERO -->
+        <section class="home">
+            <!-- Header -->
+            <header>
+                <div>
+                    <span>local_fire_department</span>
+                    <h2>TOSTADOR_VALENCIA</h2>
+                </div>
+                <!-- Desktop Nav -->
+                <nav>
+                    <div>
+                        <a href="#">Shop</a>
+                        <a href="#">Wholesale</a>
+                        <a href="#">Journal</a>
+                    </div>
+                    <button> Cart (0) </button>
+                </nav>
+                <!-- Mobile Menu Icon -->
+                <button>
+                    <span>menu</span>
+                </button>
+            </header>
+            <!-- Hero Content -->
+            <main>
+                <!-- Dynamic Data Marker -->
+                <div>
+                    <div>
+                        <span>schedule</span>
+                        <span>14:05:22 CET • 24.10.2023</span>
+                    </div>
+                </div>
+                <!-- Massive Typography -->
+                <div>
+                    <h1>
+                        Roasted <br />
+                        <span>in Valencia</span>
+                    </h1>
+                </div>
+                <div>
+                    <div>
+                        COORD: 39.4699° N, 0.3763° W<br />
+                        ELEVATION: 15 M<br />
+                        HUMIDITY: 65%
+                    </div>
+                    <div>
+                        <span>settings</span>
+                    </div>
+                </div>
+            </main>
+        </section>
+        <!-- SECTION 2: MANIFESTO -->
+        <section class="philosophy">
+            <!-- Label Column -->
+            <div>
+                <span>Manifesto 001</span>
+            </div>
+            <!-- Content Column -->
+            <div>
+                <div>
+                    <p>
+                        LA FRESCURA NO ES NEGOCIABLE. <br />
+                        IMPORTAMOS ORIGEN, ENTREGAMOS TIEMPO. <br />
+                        <span>SIN INTERMEDIARIOS.</span>
+                        <br />
+                        SIN RETÓRICA. SOLO CAFÉ Y FUEGO.
+                    </p>
+                    <div>
+                        <button>
+                            Read Philosophy
+                            <span>arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 3: TECHNICAL DATA -->
+        <section class="current-roasts">
+            <div>
+                <h2>Current Roasts</h2>
+                <span>Updated: 42 mins ago</span>
+            </div>
+            <!-- Grid Table -->
+            <div>
+                <div>
+                    <!-- Table Header -->
+                    <div>
+                        <div>Origin</div>
+                        <div>Varietal</div>
+                        <div>Altitude</div>
+                        <div>Process</div>
+                        <div>Roast Curve</div>
+                        <div>Action</div>
+                    </div>
+                    <!-- Row 1 -->
+                    <div>
+                        <div>
+                            <span>Ethiopia Yirgacheffe</span>
+                            <span>Lot #492-A</span>
+                        </div>
+                        <div>Heirloom</div>
+                        <div>2100 MASL</div>
+                        <div>Washed</div>
+                        <div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <span>Light</span>
+                        </div>
+                        <div>
+                            <button>
+                                <span>add</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Row 2 -->
+                    <div>
+                        <div>
+                            <span>Colombia Huila</span>
+                            <span>Lot #221-C</span>
+                        </div>
+                        <div>Pink Bourbon</div>
+                        <div>1750 MASL</div>
+                        <div>Natural</div>
+                        <div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <span>Omni</span>
+                        </div>
+                        <div>
+                            <button>
+                                <span>add</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Row 3 -->
+                    <div>
+                        <div>
+                            <span>Kenya AA</span>
+                            <span>Lot #881-K</span>
+                        </div>
+                        <div>SL-28, SL-34</div>
+                        <div>1900 MASL</div>
+                        <div>Washed</div>
+                        <div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <span>Filter</span>
+                        </div>
+                        <div>
+                            <button disabled="">
+                                <span>block</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Row 4 -->
+                    <div>
+                        <div>
+                            <span>Brazil Cerrado</span>
+                            <span>Lot #102-B</span>
+                        </div>
+                        <div>Mundo Novo</div>
+                        <div>1100 MASL</div>
+                        <div>Natural</div>
+                        <div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <span>Espresso</span>
+                        </div>
+                        <div>
+                            <button>
+                                <span>add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a href="#">
+                    View Full Archive <span>arrow_right_alt</span>
+                </a>
+            </div>
+        </section>
+        <!-- SECTION 4: THE ROASTER -->
+        <section class="roasting-machine-section">
+            <div>
+                <img
+                    alt="Roasting Machine"
+                    data-alt="Industrial black metal coffee roasting machine in a dimly lit warehouse with dramatic hard lighting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTJF9EDgSkKbgmlMk0f2l2OK-xCtVGiAFhqaR06OPjv_3WXWYlXWjz5nyFdHLV3GzvUs63x7haGUefJzRigm-3Kpp5zd7-7CZ0sqb7lJHgObWptlZUysLqwS1rc6rNYP_lgbbSewfqsoqtYQNtCWPNzS_3GTjpJCYIp-pzJqCJ5H7ReMeNbxp-7pdahzc5btSpvsf033rQSUNErxkcRyVfFkB5IZ_WiXHypchgUDLLoUWcEASr8dr3TYvqqnYAeoOil-BBRU-bCoY"
+                />
+                <div></div>
+                <!-- Technical Overlay -->
+                <div>
+                    <div>
+                        <h3>Probat G60</h3>
+                        <span>ACTIVE</span>
+                    </div>
+                    <div>
+                        <span>CAPACITY: 60KG</span>
+                        <span>TEMP: 210°C</span>
+                        <span>DRUM SPEED: 48RPM</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <span>The Factory</span>
+                    <h2>
+                        Raw Material.<br />
+                        Precise Heat.<br />
+                        Zero Bullshit.
+                    </h2>
+                    <p>
+                        Located in the industrial district of Valencia. Our
+                        facility is not a café. It is a laboratory dedicated to
+                        the thermal transformation of green coffee seeds. Visits
+                        by appointment only.
+                    </p>
+                </div>
+                <div>
+                    <div>
+                        <img
+                            alt="Location Map"
+                            data-alt="Abstract map view of Valencia industrial district with grid lines overlay"
+                            data-location="Valencia"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc7b23AIF7GXtpPOCkjtcMmRmKE-Tnp6j4CmHsbZRacRtEGYAXEEH8JtPFTexcBesWjdLmIvoOQhVqAZE-IvixN3c_cjMU9iPbvJFBkFqti-3Xf3kFVbbZIbi7UiUGGOb7u-Q-iqfDcDUHDBwlgZwttiHeo7RpP0bcGQ4RQAO5G6VZGfgOD2A3AH-sAiXreLS8BY8qPhbNMkoWF1HqYkjx3_437FndmcR2JeZqesRGmeUZD80f88dWzjlUMQHWkTdDqLy59elnE-Y"
+                        />
+                        <div>
+                            <button>
+                                <span>near_me</span>
+                                Get Directions
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <span>Carrer de la Fusteria, 12</span>
+                        <span>46001 Valencia, ES</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FOOTER -->
+        <footer>
+            <div>
+                <div>
+                    <div>
+                        <h2>TOSTADOR</h2>
+                        <p>
+                            Specialty coffee roasted in Valencia. Shipping
+                            worldwide.
+                        </p>
+                    </div>
+                    <div>
+                        <p>© 2023 TOSTADOR S.L.</p>
+                    </div>
+                </div>
+                <div>
+                    <h4>Social</h4>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <a href="#">Imprint</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            <div>
+                <h1>CAFFEINE</h1>
+            </div>
+        </footer>
+    </body>
 </html>
