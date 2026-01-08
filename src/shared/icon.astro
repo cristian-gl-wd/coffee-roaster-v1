@@ -1,7 +1,9 @@
 ---
-const { name, class: className } = Astro.props;
+import "../assets/styles/shared/icons.scss";
+
+const { name } = Astro.props;
 ---
 
-<svg class={`icon ${className}`} width="24" height="24">
+<svg class={`icon icon-${name}`}>
     <use href={`/icons.svg#${name}`}></use>
 </svg>
