@@ -1,3 +1,18 @@
-body {
-    /* background-color: black; */
+@use "./shared/variables" as *;
+
+@font-face {
+    font-family: "Syne";
+    src: url("/fonts/Syne-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    font-family: "Syne", sans-serif;
+    font-size: 30px;
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
 }
