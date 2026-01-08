@@ -1,0 +1,7 @@
+---
+const { name, class: className } = Astro.props;
+---
+
+<svg class={`icon ${className}`} width="24" height="24">
+    <use href={`/icons.svg#${name}`}></use>
+</svg>
