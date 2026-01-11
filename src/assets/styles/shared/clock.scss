@@ -1,0 +1,9 @@
+.clock-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.time-text {
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
