@@ -2,17 +2,69 @@
 
 @font-face {
     font-family: "Syne";
-    src: url("/fonts/syne-variablefont_wght-webfont.woff2") format("woff2");
+    src: url("/fonts/Syne-VariableFont_wght.ttf") format("truetype");
     font-weight: 100 900;
     font-style: normal;
     font-display: fallback;
 }
+
+@font-face {
+    font-family: "Sora";
+    src: url("/fonts/Sora-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: fallback;
+}
+
+::-webkit-scrollbar {
+    width: 0.74rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+    border: 1px solid transparent;
+    background-clip: content-box;
+}
+
 html {
+    height: 100vh;
+    width: 100vw;
     font-family: "Syne", sans-serif;
     font-size: 30px;
 
-    body {
+    & > body {
         margin: 0;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        & > #content {
+            position: absolute;
+            top: $header-height;
+            height: calc(100vh - $header-height);
+            width: 100%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+
+            & > section {
+                height: 100%;
+                width: 100%;
+                border-top: 1px solid $primary-color;
+
+                .sora-font {
+                    font-family: "Sora", sans-serif;
+                }
+
+                strong.accent {
+                    color: $accent-color;
+                    fill: $accent-color;
+                }
+            }
+        }
     }
 }

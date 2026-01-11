@@ -1,11 +1,11 @@
 ---
-import Header from "./general/header.astro";
+import Header from "./general/header/header.astro";
 import Footer from "./general/footer.astro";
 
 import Home from "./sections/home.astro";
 import Philosophy from "./sections/philosophy.astro";
 import CurrentRoasts from "./sections/current-roasts.astro";
-import RoastingMachine from "./sections/roasting-machine.astro";
+import RoastingMethod from "./sections/roasting-method.astro";
 
 import "../assets/styles/general-styles.scss";
 ---
@@ -14,33 +14,40 @@ import "../assets/styles/general-styles.scss";
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content={Astro.generator} />
         <title>Coffee roaster</title>
         <link
             rel="preload"
-            href="/fonts/syne-variablefont_wght-webfont.woff2"
+            href="/fonts/Syne-VariableFont_wght.ttf"
             as="font"
-            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="/fonts/Sora-VariableFont_wght.ttf"
+            as="font"
             crossorigin
         />
     </head>
     <body>
         <Header />
 
-        <!-- SECTION 1: HEADER -->
-        <Home />
+        <div id="content">
+            <!-- SECTION 1: HEADER -->
+            <Home />
 
-        <!-- SECTION 2: PHILOSOPHY -->
-        <Philosophy />
+            <!-- SECTION 2: PHILOSOPHY -->
+            <Philosophy />
 
-        <!-- SECTION 3: CURRENT ROASTS -->
-        <CurrentRoasts />
+            <!-- SECTION 3: CURRENT ROASTS -->
+            <CurrentRoasts />
 
-        <!-- SECTION 4: ROASTING MACHINE -->
-        <RoastingMachine />
+            <!-- SECTION 4: ROASTING MACHINE -->
+            <RoastingMethod />
 
-        <!-- FOOTER -->
-        <Footer />
+            <!-- FOOTER -->
+            <Footer />
+        </div>
     </body>
 </html>
