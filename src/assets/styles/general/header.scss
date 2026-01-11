@@ -1,15 +1,12 @@
 @use "../shared/variables" as *;
 
 header {
-    border-bottom: 2px solid $primary-color;
+    border-bottom: 1px solid $primary-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    height: $header-height;
+    padding-inline: 1rem;
     background-color: $secondary-color;
 
     & > .title {
@@ -25,43 +22,139 @@ header {
         & > h2 {
             font-weight: 800;
             margin: 0;
-        }
-    }
 
-    & > .menu > nav {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-
-        & > ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-
-            & > li > a {
+            & > a {
                 text-decoration: none;
                 color: inherit;
             }
         }
+    }
 
-        & > a.shop {
-            text-decoration: none;
-            border: none;
-            background-color: $primary-color;
-            color: $secondary-color;
-            fill: $secondary-color;
-            font-weight: 500;
-            font-size: 1rem;
+    & > .menu {
+        & > nav {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
-            padding: 0.5rem 1rem;
+            gap: 2rem;
+
+            & > ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                gap: 2rem;
+
+                & > li > a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+
+            & > a.shop {
+                text-decoration: none;
+                border: none;
+                background-color: $primary-color;
+                color: $secondary-color;
+                fill: $secondary-color;
+                font-weight: 500;
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                padding: 0.5rem 1rem;
+            }
         }
 
-        & > .mobile-menu {
+        & > #mobile-menu {
             display: none;
+        }
+    }
+
+    @media (max-width: 900px) {
+        padding-inline: 0.5rem;
+
+        & > .title {
+            gap: 0.5rem;
+
+            & > .icon {
+                width: 1rem;
+                height: 1rem;
+            }
+
+            & > h2 {
+                font-size: 1rem;
+                font-weight: 800;
+                margin: 0;
+
+                & > a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+        }
+
+        & > .menu {
+            & > nav {
+                display: none;
+
+                &.active {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: stretch;
+                    z-index: 10;
+                    position: fixed;
+                    top: $header-height;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: $secondary-color;
+                    font-size: 1.5rem;
+
+                    & > ul {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: stretch;
+                        justify-content: center;
+                        gap: 4rem;
+
+                        & > li > a {
+                            display: block;
+                            text-align: center;
+                        }
+                    }
+
+                    & > a {
+                        flex: 0;
+
+                        & > span {
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+
+            & > button#mobile-menu {
+                display: block;
+                border: none;
+                background-color: unset;
+
+                &.active {
+                    & > svg.icon-menu {
+                        display: none;
+                    }
+                }
+
+                &:not(.active) {
+                    & > svg.icon-close {
+                        display: none;
+                    }
+                }
+
+                & > svg {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
         }
     }
 }
