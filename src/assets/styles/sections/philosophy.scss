@@ -1,0 +1,40 @@
+@use "../shared/variables" as *;
+
+section#philosophy {
+    display: flex;
+
+    & > .label {
+        border-right: 1px solid $primary-color;
+
+        & > span {
+            transform: rotate(270deg);
+            font-size: 0.75rem;
+            padding: 0.25em;
+            margin-top: 4rem;
+            background-color: $primary-color;
+            color: $secondary-color;
+            text-transform: uppercase;
+            text-align: center;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: visible;
+        }
+    }
+
+    & > .content {
+        width: 100%;
+        padding: 3rem;
+        color: $primary-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        /* font-size: 2rem; */
+        font-size: clamp(0.75rem, 2rem, 2.5rem);
+        font-weight: 600;
+
+        & > span > strong {
+            font-weight: 700;
+        }
+    }
+}
