@@ -1,58 +1,70 @@
+@use "../shared/variables" as *;
+
 section#home {
-    height: 100vh;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2rem;
-    background-color: rgb(255, 250, 250);
+    padding: 1rem 2rem;
     box-sizing: border-box;
 
-    > div:nth-child(1) {
+    & > .container > .time-content {
         display: flex;
         justify-content: flex-end;
+        margin-bottom: 1rem;
+        font-size: 0.75rem;
 
-        div {
-            background-color: #007bff;
-            color: white;
-            padding: 0.5rem 1rem;
-            border: 2px solid #000;
+        & > .time {
+            display: flex;
+            align-items: center;
+            margin-right: 1rem;
+            background-color: $accent-color;
+            color: $secondary-color;
+            fill: $secondary-color;
+            border: 2px solid $primary-color;
+            padding: 0.25rem;
+            -webkit-box-shadow: 6px 6px 0px 0px $primary-color;
+            box-shadow: 6px 6px 0px 0px $primary-color;
 
-            span:first-child {
-                display: none;
+            & > svg {
+                margin-right: 0.5rem;
             }
         }
     }
 
-    > div:nth-child(2) {
-        text-align: center;
+    & > .container > .title {
+        font-size: 3rem;
+        line-height: 1.5;
 
-        h1 {
-            font-size: 10vw;
-            font-weight: 800;
-            line-height: 1;
-            text-transform: uppercase;
-            margin: 0;
+        span {
+            font-weight: 900;
+            display: block;
 
-            span {
-                font-weight: 400;
+            &:first-child {
+                text-align: start;
+                margin-right: 2rem;
+            }
+
+            &:nth-child(2) {
+                text-align: end;
+                margin-left: 2rem;
             }
         }
     }
 
-    > div:nth-child(3) {
+    & > .info {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
         border-top: 1px solid #000;
         padding-top: 1rem;
 
-        div:first-child {
-            font-family: monospace;
+        & > .data {
             font-size: 0.8rem;
         }
 
-        div:last-child {
+        & > .icon-engine > .icon {
+            height: 4rem;
+            width: 4rem;
         }
     }
 }

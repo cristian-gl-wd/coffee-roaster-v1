@@ -1,28 +1,39 @@
 ---
 import "../../assets/styles/sections/home.scss";
+import Clock from "../../shared/clock/clock.astro";
 import Icon from "../../shared/icon.astro";
 ---
 
 <section id="home">
-    <div>
-        <div>
-            <span>schedule</span>
-            <span>14:05:22 CET • 24.10.2023</span>
+    <div class="container">
+        <div class="time-content">
+            <div class="time sora-font">
+                <Icon name="schedule" />
+                <Clock />
+            </div>
+        </div>
+        <div class="title">
+            <span>ROASTED</span>
+            <span>IN VALENCIA</span>
         </div>
     </div>
-    <div>
-        <h1>
-            Roasted <br />
-            <span>in Valencia</span>
-        </h1>
-    </div>
-    <div>
-        <div>
-            COORD: 39.4699° N, 0.3763° W<br />
-            ELEVATION: 15 M<br />
-            HUMIDITY: 65%
+    <div class="info">
+        <div class="data">
+            <p>
+                <strong>COORD:</strong>
+                <span class="sora-font">39°24'05.7"N</span>,
+                <span class="sora-font">0°23'55.6"W</span>
+            </p>
+            <p>
+                <strong>ELEVATION:</strong>
+                <span class="sora-font">11 M</span>
+            </p>
+            <p>
+                <strong>HUMIDITY:</strong>
+                <span class="sora-font">65%</span>
+            </p>
         </div>
-        <div>
+        <div class="icon-engine">
             <Icon name="settings" />
         </div>
     </div>
