@@ -4,7 +4,7 @@ const menuLinks = document.querySelectorAll(
   "header > .menu > nav > ul > li > a",
 );
 
-const titleLink = document.querySelector("header > .title > h2 > a");
+const titleLink = document.querySelector("header > a.title");
 
 mobileMenu.addEventListener("click", () => {
   mobileMenu.classList.toggle("active");

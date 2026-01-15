@@ -1,0 +1,42 @@
+---
+import Icon from "../../shared/icon.astro";
+
+import "../../assets/styles/layouts/header.scss";
+---
+
+<header>
+  <a class="title" href="#home">
+    <Icon name="fire" />
+    <h2>Kenya</h2>
+  </a>
+
+  <div class="menu">
+    <!-- Desktop Nav -->
+    <nav>
+      <ul>
+        <li>
+          <a href="#philosophy">Philosophy</a>
+        </li>
+        <li>
+          <a href="#current-roasts">Current roasts</a>
+        </li>
+        <li>
+          <a href="#roasting-method">Roasting method</a>
+        </li>
+      </ul>
+      <a href="#home" class="shop">
+        <span>
+          <Icon name="shopping-cart" /> Shop
+        </span>
+      </a>
+    </nav>
+
+    <!-- Mobile Menu Icon -->
+    <button id="mobile-menu">
+      <Icon name="menu" />
+      <Icon name="close" hidden />
+    </button>
+  </div>
+</header>
+
+<script src="./header.js"></script>
